@@ -8,9 +8,9 @@ module MyEnumerable
 
     def any?
         each do |i|
-            return false unless yield(i)
+            return true if yield(i)
         end
-        true
+        false
     end
 
     def filter
